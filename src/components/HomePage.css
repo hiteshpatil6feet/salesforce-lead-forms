@@ -22,7 +22,30 @@ body, html {
   background: linear-gradient(to bottom right, #f7fbff, #e8f5fe);
   width: 100%;
 }
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+}
 
+.notification-popup button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+}
 .hero-content {
     text-align: center;
     max-width: 650px; /* Reduced from 800px */

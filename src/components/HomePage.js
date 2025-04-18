@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HomePage.css';
 
 const HomePage = ({ onGetStarted }) => {
+  const [showNotification, setShowNotification] = useState(true);
+  
   return (
     <div className="homepage-content">
+      {showNotification && (
+        <div className="notification-popup">
+          <p>Thank you for submitting your insurance inquiry. A representative will review your application shortly.</p>
+          <button onClick={() => setShowNotification(false)}>✕</button>
+        </div>
+      )}
+      
       <main className="homepage-main">
         <div className="hero-content">
           <h2 className="hero-heading">Find the Right Insurance Coverage</h2>
@@ -14,7 +23,7 @@ const HomePage = ({ onGetStarted }) => {
               Get your free quote now and discover your savings potential!
             </p>
           </div>
-          <button 
+          <button
             className="get-started-button"
             onClick={onGetStarted}
           >
@@ -22,14 +31,13 @@ const HomePage = ({ onGetStarted }) => {
           </button>
         </div>
       </main>
-
       <footer className="homepage-footer">
         <div className="footer-content">
           <p>&copy; {new Date().getFullYear()} Insurance Services. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
+            <a href="https://www.iit.edu/privacy">Privacy Policy</a>
+            <a href="https://www.iit.edu/procurement-services/vendor-resources/purchasing-requirements-terms-and-conditions/terms-and-conditions">Terms of Service</a>
+            <a href="https://www.iit.edu/about/contact-us">Contact Us</a>
           </div>
         </div>
       </footer>

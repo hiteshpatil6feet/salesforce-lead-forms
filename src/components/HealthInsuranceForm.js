@@ -69,7 +69,7 @@ const HealthInsuranceForm = ({ onSubmitSuccess }) => {
       // Form is valid, submit to Salesforce
       const form = e.target;
       form.submit();
-      onSubmitSuccess();
+      //onSubmitSuccess();
     }
   };
 
